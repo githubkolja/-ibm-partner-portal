@@ -1,0 +1,148 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.news-section {
+  padding: $spacing-09 $spacing-05;
+  background-color: $layer-01;
+
+  @include breakpoint(md) {
+    padding: $spacing-10 $spacing-07;
+  }
+}
+
+.section-container {
+  max-width: 1584px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: $spacing-08;
+  text-align: center;
+
+  @include breakpoint(md) {
+    text-align: left;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: $spacing-04;
+  color: $text-primary;
+
+  @include breakpoint(md) {
+    font-size: 2.5rem;
+  }
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: $text-secondary;
+  max-width: 600px;
+
+  @include breakpoint(md) {
+    max-width: none;
+  }
+}
+
+.news-grid {
+  margin-bottom: $spacing-07;
+}
+
+.news-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-06;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.news-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-05;
+  flex-wrap: wrap;
+  gap: $spacing-03;
+}
+
+.news-date {
+  display: flex;
+  align-items: center;
+  gap: $spacing-02;
+  color: $text-secondary;
+  font-size: 0.875rem;
+
+  svg {
+    fill: $text-secondary;
+  }
+}
+
+.news-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: $spacing-04;
+  color: $text-primary;
+  line-height: 1.4;
+}
+
+.news-summary {
+  font-size: 0.875rem;
+  color: $text-secondary;
+  margin-bottom: $spacing-05;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.news-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-03;
+  margin-bottom: $spacing-05;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-02;
+  color: $link-primary;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $link-primary-hover;
+    text-decoration: underline;
+  }
+
+  svg {
+    transition: transform 0.2s;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacing-07;
+}
+
+.no-results {
+  text-align: center;
+  padding: $spacing-09 $spacing-05;
+  color: $text-secondary;
+  font-size: 1.125rem;
+}
+
+// Made with Bob

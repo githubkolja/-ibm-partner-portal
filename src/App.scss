@@ -1,0 +1,118 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+  background-color: $layer-01;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #0f62fe 0%, #001d6c 100%);
+  padding: $spacing-10 $spacing-05;
+  text-align: center;
+  color: white;
+  margin-bottom: $spacing-07;
+
+  @include breakpoint(md) {
+    padding: $spacing-12 $spacing-07;
+  }
+
+  @include breakpoint(lg) {
+    padding: $spacing-13 $spacing-09;
+  }
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: $spacing-05;
+  line-height: 1.2;
+
+  @include breakpoint(md) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 3.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  line-height: 1.5;
+
+  @include breakpoint(md) {
+    font-size: 1.25rem;
+  }
+}
+
+.portal-footer {
+  background-color: $layer-02;
+  border-top: 1px solid $border-subtle-01;
+  padding: $spacing-07 $spacing-05;
+  margin-top: $spacing-09;
+
+  @include breakpoint(md) {
+    padding: $spacing-07 $spacing-07;
+  }
+}
+
+.footer-content {
+  max-width: 1584px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-05;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p {
+    margin: 0;
+    color: $text-secondary;
+  }
+}
+
+.footer-links {
+  display: flex;
+  gap: $spacing-06;
+  flex-wrap: wrap;
+
+  a {
+    color: $link-primary;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $link-primary-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Ensure proper spacing for Carbon components
+.cds--header {
+  border-bottom: 1px solid $border-subtle-01;
+}
+
+.cds--content {
+  background-color: $layer-01;
+}
+
+// Made with Bob

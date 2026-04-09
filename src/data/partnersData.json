@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "category": "watsonx Platform",
+    "partners": [
+      {
+        "name": "watsonx.ai",
+        "description": "Foundation models, generative AI, and machine learning",
+        "url": "https://www.ibm.com/watsonx/ai",
+        "type": "Product"
+      },
+      {
+        "name": "watsonx.data",
+        "description": "Open lakehouse for AI workloads",
+        "url": "https://www.ibm.com/watsonx/data",
+        "type": "Product"
+      },
+      {
+        "name": "watsonx.governance",
+        "description": "AI governance, risk, and compliance",
+        "url": "https://www.ibm.com/watsonx/governance",
+        "type": "Product"
+      },
+      {
+        "name": "watsonx Assistant",
+        "description": "Conversational AI for customer service",
+        "url": "https://www.ibm.com/watsonx/assistant",
+        "type": "Product"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Cloud Pak for Business Automation",
+    "partners": [
+      {
+        "name": "Business Automation Workflow",
+        "description": "Orchestrate work across systems and teams",
+        "url": "https://www.ibm.com/cloud-paks/automation/workflow",
+        "type": "Solution"
+      },
+      {
+        "name": "Automation Decision Services",
+        "description": "Automate decisions with AI-enhanced rules",
+        "url": "https://www.ibm.com/automation/decision-services",
+        "type": "Solution"
+      },
+      {
+        "name": "Robotic Process Automation",
+        "description": "Automate repetitive tasks with software bots",
+        "url": "https://www.ibm.com/automation/rpa",
+        "type": "Solution"
+      },
+      {
+        "name": "Process Mining",
+        "description": "Discover and optimize business processes",
+        "url": "https://www.ibm.com/automation/process-mining",
+        "type": "Solution"
+      },
+      {
+        "name": "Document Processing",
+        "description": "Extract insights from documents with AI",
+        "url": "https://www.ibm.com/automation/document-processing",
+        "type": "Solution"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Cloud Pak for Data",
+    "partners": [
+      {
+        "name": "Watson Studio",
+        "description": "Build, train, and deploy AI models",
+        "url": "https://www.ibm.com/watson/studio",
+        "type": "Product"
+      },
+      {
+        "name": "Watson Machine Learning",
+        "description": "Deploy and manage ML models at scale",
+        "url": "https://www.ibm.com/watson/machine-learning",
+        "type": "Product"
+      },
+      {
+        "name": "DataStage",
+        "description": "Enterprise data integration and ETL",
+        "url": "https://www.ibm.com/datastage",
+        "type": "Product"
+      },
+      {
+        "name": "Watson Knowledge Catalog",
+        "description": "Data governance and catalog",
+        "url": "https://www.ibm.com/watson/knowledge-catalog",
+        "type": "Product"
+      },
+      {
+        "name": "Cognos Analytics",
+        "description": "AI-powered business intelligence",
+        "url": "https://www.ibm.com/cognos-analytics",
+        "type": "Product"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "AI & Analytics Services",
+    "partners": [
+      {
+        "name": "IBM Consulting - AI Services",
+        "description": "End-to-end AI implementation and strategy",
+        "url": "https://www.ibm.com/consulting/ai",
+        "type": "Service"
+      },
+      {
+        "name": "IBM Expert Labs",
+        "description": "Technical expertise for AI and automation",
+        "url": "https://www.ibm.com/expert-labs",
+        "type": "Service"
+      },
+      {
+        "name": "IBM Technology Support",
+        "description": "24/7 support for IBM AI and automation products",
+        "url": "https://www.ibm.com/support",
+        "type": "Service"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Partner Ecosystem",
+    "partners": [
+      {
+        "name": "Red Hat OpenShift",
+        "description": "Kubernetes platform for AI workloads",
+        "url": "https://www.redhat.com/openshift",
+        "type": "Technology Partner"
+      },
+      {
+        "name": "NVIDIA",
+        "description": "GPU acceleration for AI training",
+        "url": "https://www.nvidia.com/ibm",
+        "type": "Technology Partner"
+      },
+      {
+        "name": "SAP",
+        "description": "Integration with SAP enterprise systems",
+        "url": "https://www.sap.com/ibm",
+        "type": "Technology Partner"
+      },
+      {
+        "name": "Salesforce",
+        "description": "CRM integration with Watson AI",
+        "url": "https://www.salesforce.com/ibm",
+        "type": "Technology Partner"
+      },
+      {
+        "name": "Adobe",
+        "description": "AI-powered content and experience",
+        "url": "https://www.adobe.com/ibm",
+        "type": "Technology Partner"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Learning & Resources",
+    "partners": [
+      {
+        "name": "IBM Skills Network",
+        "description": "Free courses on AI and automation",
+        "url": "https://skills.yourlearning.ibm.com",
+        "type": "Resource"
+      },
+      {
+        "name": "IBM Developer",
+        "description": "Code patterns, tutorials, and documentation",
+        "url": "https://developer.ibm.com",
+        "type": "Resource"
+      },
+      {
+        "name": "IBM Community",
+        "description": "Connect with experts and peers",
+        "url": "https://community.ibm.com",
+        "type": "Resource"
+      },
+      {
+        "name": "IBM Documentation",
+        "description": "Product documentation and guides",
+        "url": "https://www.ibm.com/docs",
+        "type": "Resource"
+      }
+    ]
+  }
+]

@@ -1,0 +1,408 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.featured-highlights {
+  background-color: $layer-01;
+}
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-05;
+  padding: $spacing-07 $spacing-05;
+  background: linear-gradient(135deg, #0f62fe 0%, #001d6c 100%);
+  margin-bottom: $spacing-09;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: $spacing-08 $spacing-07;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  color: white;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: $spacing-03;
+
+  @include breakpoint(md) {
+    font-size: 2.5rem;
+  }
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.featured-event-section,
+.videos-section,
+.wins-section,
+.upcoming-events-section {
+  padding: $spacing-07 $spacing-05;
+
+  @include breakpoint(md) {
+    padding: $spacing-09 $spacing-07;
+  }
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: $spacing-04;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: $spacing-07;
+  color: $text-primary;
+
+  @include breakpoint(md) {
+    font-size: 2.5rem;
+  }
+
+  .title-icon {
+    fill: $icon-primary;
+  }
+}
+
+// Featured Event
+.featured-event-card {
+  padding: $spacing-07;
+  background: linear-gradient(135deg, rgba(15, 98, 254, 0.1) 0%, rgba(0, 29, 108, 0.05) 100%);
+  border-left: 4px solid $link-primary;
+}
+
+.event-content {
+  .event-tag {
+    margin-bottom: $spacing-04;
+  }
+
+  .event-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: $spacing-05;
+    color: $text-primary;
+
+    @include breakpoint(md) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-05;
+    margin-bottom: $spacing-06;
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-03;
+      color: $text-secondary;
+      font-size: 0.875rem;
+
+      svg {
+        fill: $icon-secondary;
+      }
+    }
+  }
+
+  .event-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: $spacing-06;
+    color: $text-secondary;
+  }
+
+  .event-highlights {
+    list-style: none;
+    padding: 0;
+    margin-bottom: $spacing-07;
+
+    li {
+      padding: $spacing-03 0;
+      padding-left: $spacing-06;
+      position: relative;
+      color: $text-primary;
+
+      &:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: $support-success;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.event-image {
+  height: 100%;
+  display: none;
+
+  @include breakpoint(lg) {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+// Videos Section
+.videos-section {
+  background-color: $layer-02;
+}
+
+.videos-grid {
+  gap: $spacing-06;
+}
+
+.video-card {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    .play-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; // 16:9 aspect ratio
+  overflow: hidden;
+  background-color: $layer-03;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-duration {
+    position: absolute;
+    bottom: $spacing-03;
+    right: $spacing-03;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: $spacing-02 $spacing-03;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 98, 254, 0.8);
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    svg {
+      fill: white;
+    }
+  }
+}
+
+.video-content {
+  padding: $spacing-05;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: $spacing-04 0;
+  color: $text-primary;
+  line-height: 1.4;
+}
+
+.video-description {
+  font-size: 0.875rem;
+  color: $text-secondary;
+  margin-bottom: $spacing-04;
+  line-height: 1.5;
+}
+
+.video-meta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-03;
+  font-size: 0.75rem;
+  color: $text-secondary;
+  margin-bottom: $spacing-04;
+}
+
+.video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-02;
+  color: $link-primary;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+
+  &:hover {
+    color: $link-primary-hover;
+    text-decoration: underline;
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  svg {
+    transition: transform 0.2s;
+  }
+}
+
+// Wins Section
+.wins-grid {
+  gap: $spacing-06;
+}
+
+.win-card {
+  height: 100%;
+  padding: $spacing-06;
+  border-left: 4px solid $support-success;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.win-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-05;
+
+  .win-icon {
+    font-size: 2rem;
+  }
+
+  .win-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $spacing-03;
+
+    .win-date {
+      font-size: 0.75rem;
+      color: $text-secondary;
+    }
+  }
+}
+
+.win-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: $spacing-04;
+  color: $text-primary;
+  line-height: 1.4;
+}
+
+.win-solution {
+  font-size: 0.875rem;
+  margin-bottom: $spacing-04;
+  color: $text-secondary;
+
+  strong {
+    color: $text-primary;
+  }
+}
+
+.win-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: $spacing-05;
+  color: $text-secondary;
+}
+
+.win-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-03;
+}
+
+.metric-badge {
+  background-color: $layer-accent-01;
+  padding: $spacing-03 $spacing-04;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: $text-primary;
+}
+
+// Upcoming Events
+.upcoming-events-section {
+  background-color: $layer-02;
+}
+
+.upcoming-events-grid {
+  gap: $spacing-05;
+}
+
+.upcoming-event-card {
+  height: 100%;
+  padding: $spacing-05;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.upcoming-event-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: $spacing-04 0;
+  color: $text-primary;
+  line-height: 1.4;
+}
+
+.upcoming-event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-03;
+  margin-bottom: $spacing-05;
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-02;
+    font-size: 0.875rem;
+    color: $text-secondary;
+
+    svg {
+      fill: $icon-secondary;
+    }
+  }
+}
+
+// Made with Bob

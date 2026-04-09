@@ -1,0 +1,92 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.partners-section {
+  padding: $spacing-09 $spacing-05;
+  background-color: $layer-02;
+
+  @include breakpoint(md) {
+    padding: $spacing-10 $spacing-07;
+  }
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  gap: $spacing-04;
+  width: 100%;
+
+  .category-icon {
+    font-size: 1.5rem;
+  }
+
+  .partner-count {
+    margin-left: auto;
+  }
+}
+
+.partner-name {
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.partner-description {
+  color: $text-secondary;
+  font-size: 0.875rem;
+}
+
+.partner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-02;
+  color: $link-primary;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $link-primary-hover;
+    text-decoration: underline;
+  }
+
+  svg {
+    transition: transform 0.2s;
+  }
+
+  &:hover svg {
+    transform: translate(2px, -2px);
+  }
+}
+
+// Responsive table adjustments
+.cds--structured-list {
+  @include breakpoint-down(md) {
+    .cds--structured-list-th:nth-child(2),
+    .cds--structured-list-td:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @include breakpoint-down(sm) {
+    .cds--structured-list-th:nth-child(3),
+    .cds--structured-list-td:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.cds--accordion__item {
+  border-top: 1px solid $border-subtle-01;
+
+  &:last-child {
+    border-bottom: 1px solid $border-subtle-01;
+  }
+}
+
+.cds--accordion__content {
+  padding: $spacing-05 $spacing-06;
+}
+
+// Made with Bob

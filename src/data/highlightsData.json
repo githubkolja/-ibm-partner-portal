@@ -1,0 +1,187 @@
+{
+  "featuredEvent": {
+    "id": 1,
+    "title": "IBM Think 2026: AI & Automation Summit",
+    "type": "event",
+    "date": "2026-05-15",
+    "location": "Boston, MA & Virtual",
+    "description": "Join thousands of partners, customers, and IBM experts for the premier AI and automation event of the year. Discover the latest innovations in watsonx, Cloud Pak, and enterprise automation.",
+    "image": "https://via.placeholder.com/800x400/0f62fe/ffffff?text=IBM+Think+2026",
+    "link": "https://www.ibm.com/events/think",
+    "highlights": [
+      "Keynote: The Future of Enterprise AI with watsonx",
+      "100+ Technical Sessions on Automation & AI",
+      "Hands-on Labs with IBM Products",
+      "Partner Networking & Certification Opportunities"
+    ],
+    "cta": "Register Now"
+  },
+  "videos": [
+    {
+      "id": 1,
+      "title": "watsonx.ai in Action: Building Enterprise AI Solutions",
+      "brand": "watsonx.ai",
+      "duration": "12:45",
+      "thumbnail": "https://via.placeholder.com/400x225/0f62fe/ffffff?text=watsonx.ai+Demo",
+      "description": "Watch how leading enterprises are leveraging watsonx.ai to build and deploy generative AI applications at scale.",
+      "link": "https://www.youtube.com/ibm",
+      "views": "125K",
+      "date": "2026-04-01"
+    },
+    {
+      "id": 2,
+      "title": "Cloud Pak for Business Automation: Complete Walkthrough",
+      "brand": "Cloud Pak for Business Automation",
+      "duration": "18:30",
+      "thumbnail": "https://via.placeholder.com/400x225/0f62fe/ffffff?text=Cloud+Pak+Demo",
+      "description": "Comprehensive demo of IBM Cloud Pak for Business Automation showing workflow orchestration, RPA, and decision automation.",
+      "link": "https://www.youtube.com/ibm",
+      "views": "89K",
+      "date": "2026-03-28"
+    },
+    {
+      "id": 3,
+      "title": "Customer Success: AI Transformation with IBM Consulting",
+      "brand": "IBM Consulting",
+      "duration": "8:15",
+      "thumbnail": "https://via.placeholder.com/400x225/0f62fe/ffffff?text=Customer+Success",
+      "description": "Fortune 500 company shares their journey to AI-powered operations with IBM Consulting and watsonx platform.",
+      "link": "https://www.youtube.com/ibm",
+      "views": "67K",
+      "date": "2026-03-25"
+    },
+    {
+      "id": 4,
+      "title": "Process Mining: Discover Hidden Opportunities",
+      "brand": "IBM Process Mining",
+      "duration": "10:20",
+      "thumbnail": "https://via.placeholder.com/400x225/0f62fe/ffffff?text=Process+Mining",
+      "description": "Learn how IBM Process Mining uses AI to analyze business processes and identify optimization opportunities.",
+      "link": "https://www.youtube.com/ibm",
+      "views": "54K",
+      "date": "2026-03-20"
+    }
+  ],
+  "recentWins": [
+    {
+      "id": 1,
+      "title": "Global Bank Achieves 60% Cost Reduction with Cloud Pak",
+      "company": "Major Financial Institution",
+      "industry": "Financial Services",
+      "solution": "Cloud Pak for Business Automation",
+      "date": "2026-04-05",
+      "description": "Leading global bank implements IBM Cloud Pak for Business Automation to streamline loan processing, reducing operational costs by 60% and processing time by 75%.",
+      "metrics": [
+        "60% cost reduction",
+        "75% faster processing",
+        "500K+ loans automated annually",
+        "$50M+ annual savings"
+      ],
+      "icon": "💰"
+    },
+    {
+      "id": 2,
+      "title": "Healthcare Provider Transforms Patient Care with watsonx",
+      "company": "National Healthcare Network",
+      "industry": "Healthcare",
+      "solution": "watsonx.ai & Watson Assistant",
+      "date": "2026-04-03",
+      "description": "Healthcare network deploys watsonx.ai and Watson Assistant to provide 24/7 patient support, improving satisfaction scores by 45% and reducing call center volume by 40%.",
+      "metrics": [
+        "45% higher patient satisfaction",
+        "40% reduction in call volume",
+        "2M+ patient interactions",
+        "24/7 AI-powered support"
+      ],
+      "icon": "🏥"
+    },
+    {
+      "id": 3,
+      "title": "Manufacturing Giant Optimizes Supply Chain with AI",
+      "company": "Global Manufacturing Leader",
+      "industry": "Manufacturing",
+      "solution": "watsonx.data & Cloud Pak for Data",
+      "date": "2026-03-30",
+      "description": "Fortune 100 manufacturer uses watsonx.data and Cloud Pak for Data to optimize supply chain operations, reducing inventory costs by $100M and improving delivery times by 35%.",
+      "metrics": [
+        "$100M inventory savings",
+        "35% faster delivery",
+        "99.5% forecast accuracy",
+        "Real-time supply chain visibility"
+      ],
+      "icon": "🏭"
+    },
+    {
+      "id": 4,
+      "title": "Retail Chain Automates 80% of Back-Office Operations",
+      "company": "International Retail Corporation",
+      "industry": "Retail",
+      "solution": "IBM RPA & Automation Decision Services",
+      "date": "2026-03-28",
+      "description": "Major retail chain implements IBM RPA and Automation Decision Services to automate invoice processing, inventory management, and vendor onboarding, achieving 80% automation rate.",
+      "metrics": [
+        "80% process automation",
+        "95% accuracy improvement",
+        "200K+ invoices processed monthly",
+        "$25M annual cost savings"
+      ],
+      "icon": "🛒"
+    },
+    {
+      "id": 5,
+      "title": "Insurance Company Accelerates Claims with Document AI",
+      "company": "Leading Insurance Provider",
+      "industry": "Insurance",
+      "solution": "Document Processing & Watson Studio",
+      "date": "2026-03-25",
+      "description": "Insurance provider uses IBM Document Processing and Watson Studio to automate claims processing, reducing processing time from days to hours with 98% accuracy.",
+      "metrics": [
+        "90% faster claims processing",
+        "98% extraction accuracy",
+        "1M+ documents processed",
+        "$30M operational savings"
+      ],
+      "icon": "🛡️"
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "id": 1,
+      "title": "watsonx Technical Deep Dive Webinar",
+      "date": "2026-04-15",
+      "time": "2:00 PM EDT",
+      "type": "Webinar",
+      "link": "https://www.ibm.com/events/webinar"
+    },
+    {
+      "id": 2,
+      "title": "Partner Enablement: Cloud Pak Certification",
+      "date": "2026-04-20",
+      "time": "10:00 AM EDT",
+      "type": "Training",
+      "link": "https://www.ibm.com/training"
+    },
+    {
+      "id": 3,
+      "title": "AI Governance Best Practices Workshop",
+      "date": "2026-04-25",
+      "time": "1:00 PM EDT",
+      "type": "Workshop",
+      "link": "https://www.ibm.com/events/workshop"
+    },
+    {
+      "id": 4,
+      "title": "Automation ROI Calculator Launch",
+      "date": "2026-05-01",
+      "time": "11:00 AM EDT",
+      "type": "Product Launch",
+      "link": "https://www.ibm.com/automation/roi"
+    }
+  ],
+  "stats": {
+    "partners": "15,000+",
+    "deployments": "50,000+",
+    "countries": "175+",
+    "certifications": "25,000+"
+  }
+}
