@@ -1,0 +1,118 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.hero-section {
+  background: linear-gradient(135deg, #161616 0%, #262626 50%, #393939 100%);
+  padding: $spacing-10 0 $spacing-09;
+  border-bottom: 1px solid $border-subtle-01;
+
+  @include breakpoint-down(md) {
+    padding: $spacing-08 0 $spacing-07;
+  }
+}
+
+.hero-content {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 $spacing-05;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: $spacing-09;
+  align-items: start;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-07;
+  }
+
+  @include breakpoint-down(md) {
+    padding: 0 $spacing-03;
+  }
+}
+
+.hero-main {
+  .hero-eyebrow {
+    @include type-style('label-01');
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    margin-bottom: $spacing-03;
+  }
+
+  .hero-title {
+    @include type-style('heading-05');
+    color: $text-primary;
+    margin-bottom: $spacing-05;
+    line-height: 1.25;
+
+    @include breakpoint-down(md) {
+      @include type-style('heading-04');
+    }
+  }
+
+  .hero-intro {
+    @include type-style('body-02');
+    color: $text-secondary;
+    max-width: 720px;
+    line-height: 1.5;
+    margin-bottom: $spacing-06;
+  }
+
+  .hero-chips {
+    display: flex;
+    gap: $spacing-03;
+    flex-wrap: wrap;
+  }
+}
+
+.hero-glance {
+  background: $layer-01;
+  border: 1px solid $border-subtle-01;
+  border-radius: 4px;
+  padding: $spacing-05;
+
+  .glance-header {
+    margin-bottom: $spacing-05;
+    padding-bottom: $spacing-04;
+    border-bottom: 1px solid $border-subtle-01;
+
+    h3 {
+      @include type-style('heading-03');
+      color: $text-primary;
+      margin: 0;
+    }
+  }
+
+  .glance-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-05;
+  }
+
+  .glance-item {
+    .glance-label {
+      @include type-style('label-01');
+      color: $text-secondary;
+      margin-bottom: $spacing-02;
+      text-transform: uppercase;
+      letter-spacing: 0.32px;
+    }
+
+    .glance-value {
+      @include type-style('body-01');
+      color: $text-primary;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $spacing-03;
+
+      .cds--btn {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// Made with Bob

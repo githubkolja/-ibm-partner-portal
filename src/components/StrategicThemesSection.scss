@@ -1,0 +1,131 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.strategic-themes-section {
+  padding: $spacing-10 0;
+  background: $layer-01;
+
+  @include breakpoint-down(md) {
+    padding: $spacing-08 0;
+  }
+}
+
+.themes-container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 $spacing-05;
+
+  @include breakpoint-down(md) {
+    padding: 0 $spacing-03;
+  }
+}
+
+.themes-header {
+  margin-bottom: $spacing-08;
+  max-width: 720px;
+
+  h2 {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin-bottom: $spacing-03;
+  }
+
+  .themes-subtitle {
+    @include type-style('body-02');
+    color: $text-secondary;
+    line-height: 1.5;
+  }
+}
+
+.themes-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-07;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-06;
+  }
+}
+
+.themes-column {
+  .column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-06;
+    padding: $spacing-05;
+    background: $background;
+    border: 1px solid $border-subtle-01;
+    border-radius: 4px;
+
+    h3 {
+      @include type-style('heading-03');
+      color: $text-primary;
+      margin: 0;
+    }
+
+    .column-icon {
+      font-size: 2rem;
+    }
+  }
+
+  &.automation .column-header {
+    border-left: 4px solid $support-info;
+  }
+
+  &.data-ai .column-header {
+    border-left: 4px solid $support-success;
+  }
+}
+
+.themes-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-05;
+}
+
+.theme-card {
+  background: $background;
+  border: 1px solid $border-subtle-01;
+  border-radius: 4px;
+  padding: $spacing-05;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-04;
+
+  .theme-title {
+    @include type-style('productive-heading-02');
+    color: $text-primary;
+    margin: 0;
+    padding-bottom: $spacing-03;
+    border-bottom: 1px solid $border-subtle-01;
+  }
+
+  .theme-section {
+    .theme-label {
+      @include type-style('label-01');
+      color: $text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.32px;
+      margin-bottom: $spacing-02;
+    }
+
+    .theme-text {
+      @include type-style('body-01');
+      color: $text-secondary;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  .theme-cta {
+    margin-top: auto;
+    padding-top: $spacing-03;
+    border-top: 1px solid $border-subtle-01;
+  }
+}
+
+// Made with Bob

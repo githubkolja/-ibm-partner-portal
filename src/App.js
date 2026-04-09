@@ -10,64 +10,89 @@ import {
   Content,
   Theme
 } from '@carbon/react';
-import { Search, Notification, UserAvatar } from '@carbon/icons-react';
-import FeaturedHighlights from './components/FeaturedHighlights';
-import NewsSection from './components/NewsSection';
-import PartnersSection from './components/PartnersSection';
-import SearchBar from './components/SearchBar';
+import { Notification, UserAvatar } from '@carbon/icons-react';
+import HeroSection from './components/HeroSection';
+import PrioritiesSection from './components/PrioritiesSection';
+import WhyMattersSection from './components/WhyMattersSection';
+import ByRoleSection from './components/ByRoleSection';
+import StrategicThemesSection from './components/StrategicThemesSection';
+import EventsAndSignalsSection from './components/EventsAndSignalsSection';
+import ActivateSection from './components/ActivateSection';
+import influenceBriefData from './data/influenceBriefData.json';
 import './App.scss';
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeSection, setActiveSection] = useState('priorities');
 
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-
-  const handleCategoryChange = (category) => {
-    setActiveCategory(category);
-    setSearchQuery(''); // Clear search when changing category
+  const scrollToSection = (sectionId) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <Theme theme="g100">
       <div className="app-container">
-        <Header aria-label="IBM Partner Portal">
+        <Header aria-label="IBM Partner Influence Brief Hub">
           <SkipToContent />
           <HeaderName href="#" prefix="IBM">
-            Partner Portal
+            Partner Influence Brief
           </HeaderName>
-          <HeaderNavigation aria-label="IBM Partner Portal">
+          <HeaderNavigation aria-label="Navigation">
             <HeaderMenuItem 
-              href="#" 
-              isActive={activeCategory === 'All'}
-              onClick={() => handleCategoryChange('All')}
+              href="#priorities" 
+              isActive={activeSection === 'priorities'}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('priorities');
+              }}
             >
-              All
+              Priorities
             </HeaderMenuItem>
             <HeaderMenuItem 
-              href="#"
-              isActive={activeCategory === 'Automation'}
-              onClick={() => handleCategoryChange('Automation')}
+              href="#by-role"
+              isActive={activeSection === 'by-role'}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('by-role');
+              }}
             >
-              Automation
+              By Role
             </HeaderMenuItem>
             <HeaderMenuItem 
-              href="#"
-              isActive={activeCategory === 'Data & AI'}
-              onClick={() => handleCategoryChange('Data & AI')}
+              href="#themes"
+              isActive={activeSection === 'themes'}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('themes');
+              }}
             >
-              Data & AI
+              Themes
+            </HeaderMenuItem>
+            <HeaderMenuItem 
+              href="#events"
+              isActive={activeSection === 'events'}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('events');
+              }}
+            >
+              Events
+            </HeaderMenuItem>
+            <HeaderMenuItem 
+              href="#activate"
+              isActive={activeSection === 'activate'}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('activate');
+              }}
+            >
+              Activate
             </HeaderMenuItem>
           </HeaderNavigation>
           <HeaderGlobalBar>
-            <HeaderGlobalAction 
-              aria-label="Search"
-              tooltipAlignment="end"
-            >
-              <Search size={20} />
-            </HeaderGlobalAction>
             <HeaderGlobalAction 
               aria-label="Notifications"
               tooltipAlignment="end"
@@ -84,37 +109,63 @@ function App() {
         </Header>
 
         <Content className="main-content">
-          <div className="hero-section">
-            <h1 className="hero-title">IBM Automation & Data AI Partner Portal</h1>
-            <p className="hero-subtitle">
-              Discover the latest news, resources, and partner solutions for IBM's 
-              automation and artificial intelligence technologies
-            </p>
+          <HeroSection data={influenceBriefData} />
+
+          <div id="priorities">
+            <PrioritiesSection priorities={influenceBriefData.priorities} />
           </div>
 
-          <SearchBar onSearch={handleSearch} />
+          <WhyMattersSection whyThisMatters={influenceBriefData.whyThisMatters} />
 
-          <FeaturedHighlights />
+          <div id="by-role">
+            <ByRoleSection byRole={influenceBriefData.byRole} />
+          </div>
 
-          <NewsSection
-            searchQuery={searchQuery}
-            activeCategory={activeCategory}
-          />
+          <div id="themes">
+            <StrategicThemesSection strategicThemes={influenceBriefData.strategicThemes} />
+          </div>
 
-          <PartnersSection
-            searchQuery={searchQuery}
-            activeCategory={activeCategory}
-          />
+          <div id="events">
+            <EventsAndSignalsSection 
+              events={influenceBriefData.events}
+              marketSignals={influenceBriefData.marketSignals}
+            />
+          </div>
+
+          <div id="activate">
+            <ActivateSection activationPaths={influenceBriefData.activationPaths} />
+          </div>
+
+          {/* Editor Note Section */}
+          <section className="editor-note-section">
+            <div className="editor-note-container">
+              <div className="editor-note-content">
+                <h3>{influenceBriefData.editorNote.title}</h3>
+                <p>{influenceBriefData.editorNote.content}</p>
+              </div>
+            </div>
+          </section>
         </Content>
 
         <footer className="portal-footer">
           <div className="footer-content">
-            <p>&copy; 2026 IBM Corporation. All rights reserved.</p>
-            <div className="footer-links">
-              <a href="https://www.ibm.com/privacy">Privacy</a>
-              <a href="https://www.ibm.com/legal">Terms of Use</a>
-              <a href="https://www.ibm.com/accessibility">Accessibility</a>
-              <a href="https://www.ibm.com/contact">Contact</a>
+            <div className="footer-main">
+              <div className="footer-brand">
+                <h4>IBM Partner Influence Brief Hub</h4>
+                <p>Curated insights for partner influencers across Automation and Data & AI</p>
+              </div>
+              <div className="footer-meta">
+                <p className="footer-update">Last updated: {influenceBriefData.monthlyContext.month}</p>
+              </div>
+            </div>
+            <div className="footer-bottom">
+              <p>&copy; 2026 IBM Corporation. All rights reserved.</p>
+              <div className="footer-links">
+                <a href="https://www.ibm.com/privacy">Privacy</a>
+                <a href="https://www.ibm.com/legal">Terms of Use</a>
+                <a href="https://www.ibm.com/accessibility">Accessibility</a>
+                <a href="https://www.ibm.com/contact">Contact</a>
+              </div>
             </div>
           </div>
         </footer>
@@ -125,4 +176,4 @@ function App() {
 
 export default App;
 
-// Made with Bob
+// Made with Bob - Partner Influence Brief Hub Edition

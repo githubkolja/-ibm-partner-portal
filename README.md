@@ -1,242 +1,276 @@
-# IBM Partner Portal - Automation & Data AI
+# IBM Partner Influence Brief Hub
 
-A modern, IBM Carbon Design System-styled portal website showcasing partner news and resources for IBM's Automation and Data & AI products.
+A curated strategic brief for IBM partner influencers across Automation and Data & AI portfolios. Designed for architects, practice leaders, CTOs, and alliance teams who need to connect IBM priorities with client conversations and activation paths.
 
-## 🚀 Features
+## 🎯 Purpose
 
-- **IBM Carbon Design System**: Professional IBM-styled UI with the g100 (dark) theme
-- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop
-- **Partner News Feed**: Dynamic news cards with filtering and pagination
-- **Categorized Partner Links**: Organized resources by product categories (watsonx, Cloud Pak, etc.)
-- **Search Functionality**: Real-time search across news articles and partner resources
-- **Category Navigation**: Filter content by Automation or Data & AI categories
-- **Interactive Components**: Accordion-based partner sections with structured lists
+This is not a news portal—it's a **decision cockpit** that answers:
+- **What matters now?** 3 curated monthly priorities
+- **Why care?** Impact through architecture, offer, and business lenses
+- **What to say?** Role-based talking points
+- **What to do next?** Clear activation paths
 
-## 🛠️ Technology Stack
+## 🏗️ Architecture
 
-- **React 18**: Modern React with hooks
-- **IBM Carbon Components React**: Official IBM design system components
-- **IBM Carbon Icons**: Comprehensive icon library
-- **SCSS**: Styling with Carbon design tokens
-- **JSON Data**: Easy-to-update content management
+### One-Page Design
+All content accessible without navigation, organized into strategic sections:
 
-## 📋 Prerequisites
+1. **Hero**: Monthly context and strategic framing
+2. **3 Priorities**: Curated themes connecting IBM direction with partner conversations
+3. **Why This Matters**: Architecture, offer, and business impact lenses
+4. **Read by Role**: Tailored guidance for 4 partner roles
+5. **Strategic Themes**: 2-column view (Automation vs Data & AI)
+6. **Events Worth Attention**: 2-3 curated enablement sessions
+7. **Signals from the Market**: 2-3 proof points and trends
+8. **Activate Now**: 4 pathways to action
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+### Design Principles
+- ✅ **Maximum 3 items** per section (except activation = 4)
+- ✅ **Equal balance** between Automation and Data & AI
+- ✅ **Strategic language** suitable for C-level conversations
+- ✅ **Role-based segmentation** without page duplication
+- ✅ **Actionable CTAs** on every card
 
-## 🏃 Getting Started
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 16+ and npm
 
 ### Installation
-
-1. Navigate to the project directory:
 ```bash
 cd ibm-partner-portal
-```
-
-2. Install dependencies:
-```bash
 npm install
 ```
 
-### Running the Application
-
-Start the development server:
+### Development
 ```bash
 npm start
 ```
+Opens at http://localhost:3000
 
-The application will open in your browser at [http://localhost:3000](http://localhost:3000)
-
-### Building for Production
-
-Create an optimized production build:
+### Production Build
 ```bash
 npm run build
 ```
+Creates optimized build in `build/` directory
 
-The build files will be in the `build/` directory.
+### Export for Sharing
+```bash
+npm run export
+```
+Creates `ibm-partner-portal-export.zip` for sharing with colleagues
 
 ## 📁 Project Structure
 
 ```
 ibm-partner-portal/
-├── public/
-│   └── index.html          # HTML template
 ├── src/
-│   ├── components/         # React components
-│   │   ├── SearchBar.js    # Search functionality
-│   │   ├── NewsSection.js  # News feed component
-│   │   └── PartnersSection.js  # Partner links component
-│   ├── data/              # JSON data files
-│   │   ├── newsData.json  # Partner news articles
-│   │   └── partnersData.json  # Partner resources
-│   ├── App.js             # Main application component
-│   ├── App.scss           # Application styles
-│   ├── index.js           # React entry point
-│   └── index.scss         # Global styles
-├── package.json           # Dependencies and scripts
-└── README.md             # This file
+│   ├── components/
+│   │   ├── HeroSection.js              # Editorial hero with glance panel
+│   │   ├── PrioritiesSection.js        # 3 monthly priorities
+│   │   ├── WhyMattersSection.js        # 3 impact lenses
+│   │   ├── ByRoleSection.js            # 4 role tabs
+│   │   ├── StrategicThemesSection.js   # 2-column themes
+│   │   ├── EventsAndSignalsSection.js  # Events + market signals
+│   │   └── ActivateSection.js          # 4 activation tiles
+│   ├── data/
+│   │   └── influenceBriefData.json     # All curated content
+│   ├── App.js                          # Main application
+│   └── App.scss                        # Global styles
+├── public/
+│   └── index.html
+└── package.json
 ```
+
+## 🎨 Technology Stack
+
+- **React 18**: Modern functional components with hooks
+- **IBM Carbon Design System**: Enterprise-grade UI components
+- **SCSS**: Styling with Carbon design tokens
+- **JSON**: Structured content management
 
 ## 📝 Content Management
 
-### Updating News Articles
+### Monthly Update Process
 
-Edit `src/data/newsData.json` to add or modify news articles:
+1. **Update Monthly Context** (`monthlyContext`)
+   - New month and strategic framing
+   - Update glance panel
 
-```json
-{
-  "id": 1,
-  "title": "Article Title",
-  "category": "Automation" or "Data & AI",
-  "date": "YYYY-MM-DD",
-  "summary": "Article summary text",
-  "link": "https://example.com",
-  "tags": ["tag1", "tag2"]
-}
+2. **Select 3 Priorities** (`priorities`)
+   - Ensure Automation/Data & AI balance
+   - Clear "why it matters" for each
+
+3. **Refresh Impact Lenses** (`whyThisMatters`)
+   - Architecture, offer, business perspectives
+
+4. **Update Role Guidance** (`byRole`)
+   - What to watch, say, do for each role
+
+5. **Review Strategic Themes** (`strategicThemes`)
+   - Update if IBM direction changes
+
+6. **Curate Events** (`events`)
+   - 2-3 upcoming enablement sessions
+
+7. **Add Market Signals** (`marketSignals`)
+   - 2-3 proof points or trends
+
+8. **Update Activation Paths** (`activationPaths`)
+   - Ensure links are current
+
+9. **Write Editor Note** (`editorNote`)
+   - Explain monthly selection rationale
+
+### Content File
+All content is managed in: `src/data/influenceBriefData.json`
+
+## 🎯 Target Audience
+
+### Primary Roles
+- **Architects**: Technical depth, integration patterns, governance
+- **Practice Leaders**: Service offerings, business models, attach opportunities
+- **CTOs**: Strategic direction, enterprise fit, operational impact
+- **Alliance Leaders**: Co-sell plays, route-to-market, ecosystem collaboration
+
+### Content Approach
+- Strategic, not tactical
+- Executive-level language
+- Actionable insights
+- Clear next steps
+
+## 🌐 Deployment Options
+
+### Option 1: IBM Cloud (Recommended)
+See [IBM_CLOUD_DEPLOYMENT.md](./IBM_CLOUD_DEPLOYMENT.md) for detailed instructions.
+
+### Option 2: Free Hosting
+See [FREE_DEPLOYMENT_GUIDE.md](./FREE_DEPLOYMENT_GUIDE.md) for Netlify, Vercel, and GitHub Pages options.
+
+### Option 3: Local Sharing
+```bash
+npm run export
 ```
+Share the generated ZIP file with colleagues.
 
-### Updating Partner Links
+## 📊 Success Metrics
 
-Edit `src/data/partnersData.json` to add or modify partner resources:
+### Engagement Goals
+- Time on page > 3 minutes
+- Section scroll depth > 80%
+- CTA click-through rate > 15%
+- Return visitor rate > 40%
 
-```json
-{
-  "id": 1,
-  "category": "Category Name",
-  "partners": [
-    {
-      "name": "Partner Name",
-      "description": "Description text",
-      "url": "https://example.com",
-      "type": "Product|Solution|Service|Technology Partner|Resource"
-    }
-  ]
-}
-```
+### Content Quality
+- Partner feedback score > 4.5/5
+- Relevance rating > 90%
+- Actionability score > 85%
 
-## 🎨 Customization
+## 🔄 Transformation History
 
-### Themes
+This portal was transformed from a content-heavy news aggregator into a curated strategic brief. See [INFLUENCE_BRIEF_TRANSFORMATION.md](./INFLUENCE_BRIEF_TRANSFORMATION.md) for complete details.
 
-The portal uses IBM Carbon's g100 (dark) theme by default. To change the theme, modify the `Theme` component in `src/App.js`:
+### Key Changes
+- ❌ Removed: 20+ news articles, generic videos, broad resource grids
+- ✅ Added: 3 curated priorities, role-based guidance, strategic themes
+- 🔄 Changed: Navigation from category-based to decision-based
+- 📐 Redesigned: From dense information to clean hierarchy
 
-```jsx
-<Theme theme="white">  // Options: white, g10, g90, g100
-```
+## 🛠️ Development
 
-### Colors and Styling
+### Available Scripts
 
-All styling uses IBM Carbon design tokens. Modify SCSS files to customize:
-- `src/App.scss` - Main application styles
-- `src/components/*.scss` - Component-specific styles
+- `npm start` - Development server with hot reload
+- `npm run build` - Production build
+- `npm test` - Run tests
+- `npm run export` - Create shareable ZIP
 
-### Navigation Categories
+### Code Style
+- Functional React components
+- IBM Carbon design patterns
+- SCSS with Carbon mixins
+- JSON for content management
 
-Update the navigation categories in `src/App.js`:
+## 📚 Documentation
 
-```jsx
-<HeaderMenuItem>Category Name</HeaderMenuItem>
-```
-
-## 🔍 Key Components
-
-### SearchBar
-- Real-time search functionality
-- Filters both news and partner resources
-- Clear button to reset search
-
-### NewsSection
-- Displays news articles in a card grid
-- Category and search filtering
-- Load more pagination
-- Responsive grid layout
-
-### PartnersSection
-- Accordion-based organization
-- Structured list display
-- Category icons and tags
-- External link handling
-
-## 📱 Responsive Breakpoints
-
-- **Small (sm)**: < 672px (Mobile)
-- **Medium (md)**: 672px - 1056px (Tablet)
-- **Large (lg)**: 1056px - 1312px (Desktop)
-- **Extra Large (xlg)**: > 1312px (Large Desktop)
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📚 IBM Product Categories
-
-### Automation Products
-- IBM Cloud Pak for Business Automation
-- IBM Robotic Process Automation (RPA)
-- IBM Process Mining
-- IBM Automation Decision Services
-
-### Data & AI Products
-- watsonx.ai (AI development platform)
-- watsonx.data (data lakehouse)
-- watsonx.governance (AI governance)
-- IBM Cloud Pak for Data
-- IBM Watson Studio
-- IBM DataStage
+- [Transformation Guide](./INFLUENCE_BRIEF_TRANSFORMATION.md) - Complete transformation details
+- [IBM Cloud Deployment](./IBM_CLOUD_DEPLOYMENT.md) - Deploy to IBM Cloud
+- [Free Deployment Guide](./FREE_DEPLOYMENT_GUIDE.md) - Free hosting options
+- [Quick Start](./QUICKSTART.md) - Get started quickly
 
 ## 🤝 Contributing
 
-To add new features or content:
+### Content Updates
+1. Edit `src/data/influenceBriefData.json`
+2. Follow content guidelines (max 3 items per section)
+3. Ensure Automation/Data & AI balance
+4. Test locally before deploying
 
-1. Update the relevant JSON data files
-2. Modify components as needed
-3. Test responsiveness across breakpoints
-4. Ensure IBM Carbon design guidelines are followed
+### Code Changes
+1. Follow IBM Carbon design patterns
+2. Maintain responsive design
+3. Test across breakpoints
+4. Update documentation
 
 ## 📄 License
 
-This project is created for demonstration purposes using IBM Carbon Design System.
+© 2026 IBM Corporation. All rights reserved.
 
-## 🔗 Useful Links
+## 🔗 Links
 
-- [IBM Carbon Design System](https://carbondesignsystem.com/)
-- [IBM Carbon Components React](https://react.carbondesignsystem.com/)
-- [IBM watsonx](https://www.ibm.com/watsonx)
-- [IBM Automation](https://www.ibm.com/automation)
+- **Repository**: https://github.com/githubkolja/-ibm-partner-portal
+- **IBM Carbon Design**: https://carbondesignsystem.com/
+- **IBM Partner Plus**: https://www.ibm.com/partnerplus
 
-## 💡 Tips
+## 💡 Key Features
 
-- Use the search bar to quickly find specific products or news
-- Click on category tags to filter content
-- All external links open in new tabs
-- The portal is optimized for both light and dark system preferences
+### Strategic Curation
+- Maximum 3 items per section
+- Monthly refresh cycle
+- Editorial selection rationale
 
-## 🐛 Troubleshooting
+### Role-Based Content
+- 4 distinct role perspectives
+- Tailored "watch, say, do" guidance
+- No page duplication
 
-### Dependencies Issues
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
+### Equal Portfolio Balance
+- IBM Automation themes
+- IBM Data & AI themes
+- Cross-portfolio priorities
 
-### Build Errors
-```bash
-npm run build
-```
-Check console for specific error messages.
+### Actionable Design
+- Clear CTAs on every card
+- 4 activation pathways
+- Direct links to resources
 
-### Styling Issues
-Ensure all SCSS files are properly importing Carbon tokens:
-```scss
-@use '@carbon/react/scss/spacing' as *;
-@use '@carbon/react/scss/theme' as *;
-```
+## 🎓 Best Practices
+
+### For Content Editors
+1. Keep language strategic and concise
+2. Focus on "why it matters" not "what it is"
+3. Ensure every item has a clear CTA
+4. Balance Automation and Data & AI equally
+5. Update monthly, not ad-hoc
+
+### For Developers
+1. Use Carbon components consistently
+2. Maintain responsive design patterns
+3. Keep data structure clean
+4. Test across all breakpoints
+5. Document any changes
+
+## 📞 Support
+
+### Questions?
+- **Technical Issues**: Check GitHub repository issues
+- **Content Questions**: Contact partner enablement team
+- **Design Feedback**: Submit via feedback form
 
 ---
 
-Built with ❤️ using IBM Carbon Design System
+**Version**: 2.0 (Influence Brief Hub)  
+**Last Updated**: April 2026  
+**Made with**: React, IBM Carbon Design System, and Bob
+
+🚀 **Ready to transform partner conversations with strategic insights!**

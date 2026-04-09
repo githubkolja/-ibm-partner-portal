@@ -1,0 +1,138 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.priorities-section {
+  padding: $spacing-10 0;
+  background: $background;
+
+  @include breakpoint-down(md) {
+    padding: $spacing-08 0;
+  }
+}
+
+.priorities-container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 $spacing-05;
+
+  @include breakpoint-down(md) {
+    padding: 0 $spacing-03;
+  }
+}
+
+.priorities-header {
+  margin-bottom: $spacing-08;
+  max-width: 720px;
+
+  h2 {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin-bottom: $spacing-03;
+  }
+
+  .priorities-subtitle {
+    @include type-style('body-02');
+    color: $text-secondary;
+    line-height: 1.5;
+  }
+}
+
+.priorities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-06;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-05;
+  }
+}
+
+.priority-card {
+  background: $layer-01;
+  border: 1px solid $border-subtle-01;
+  border-radius: 4px;
+  padding: $spacing-06;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-05;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $border-interactive;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .priority-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-03;
+    flex-wrap: wrap;
+
+    .priority-tags {
+      display: flex;
+      gap: $spacing-02;
+      flex-wrap: wrap;
+    }
+  }
+
+  .priority-title {
+    @include type-style('heading-03');
+    color: $text-primary;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .priority-why {
+    .why-label {
+      @include type-style('label-01');
+      color: $text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.32px;
+      margin-bottom: $spacing-02;
+    }
+
+    .why-text {
+      @include type-style('body-01');
+      color: $text-secondary;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  .priority-audience {
+    .audience-label {
+      @include type-style('label-01');
+      color: $text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.32px;
+      margin-bottom: $spacing-02;
+    }
+
+    .audience-tags {
+      display: flex;
+      gap: $spacing-02;
+      flex-wrap: wrap;
+
+      .audience-tag {
+        @include type-style('label-01');
+        color: $text-primary;
+        background: $layer-02;
+        padding: $spacing-02 $spacing-03;
+        border-radius: 2px;
+        border: 1px solid $border-subtle-01;
+      }
+    }
+  }
+
+  .priority-cta {
+    margin-top: auto;
+    padding-top: $spacing-03;
+    border-top: 1px solid $border-subtle-01;
+  }
+}
+
+// Made with Bob

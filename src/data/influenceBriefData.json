@@ -1,0 +1,223 @@
+{
+  "monthlyContext": {
+    "month": "April 2026",
+    "eyebrow": "Partner priorities for this month",
+    "title": "3 conversations to lead now across Automation and Data & AI",
+    "intro": "A curated brief for partner architects, practice leaders, CTOs and alliance teams to connect IBM priorities with client conversations, offerings and activation paths.",
+    "impactChips": ["Build", "Differentiate", "Sell"],
+    "glancePanel": {
+      "featuredTheme": "Agentic orchestration with enterprise governance",
+      "keyEvent": "Technical enablement session: Agent Connect & Partner Ecosystem",
+      "recommendedAction": "Review the architecture talking points"
+    }
+  },
+  
+  "priorities": [
+    {
+      "id": 1,
+      "theme": "Both",
+      "title": "Agentic orchestration moves from concept to operating model",
+      "whyMatters": "IBM is expanding the discussion from AI assistants to orchestrated agents, workflows and partner ecosystem integration through watsonx Orchestrate and Agent Connect.",
+      "audience": ["Architects", "CTOs", "Practice leaders"],
+      "cta": {
+        "label": "Explore the architecture angle",
+        "action": "architecture-brief"
+      },
+      "tags": ["Decide", "Build"]
+    },
+    {
+      "id": 2,
+      "theme": "Data & AI",
+      "title": "Responsible AI becomes a design requirement",
+      "whyMatters": "watsonx.governance and data-centric controls are now central to scaling AI in production environments. Governance, oversight and trusted data move from optional to essential.",
+      "audience": ["Architects", "CTOs", "Alliances"],
+      "cta": {
+        "label": "Open the governance brief",
+        "action": "governance-guide"
+      },
+      "tags": ["Decide", "Build"]
+    },
+    {
+      "id": 3,
+      "theme": "Automation",
+      "title": "Automation stories need a value narrative",
+      "whyMatters": "Partners can create stronger conversations when automation is linked to optimization, operations and business outcomes through portfolio integration with Apptio and FinOps.",
+      "audience": ["Practice leaders", "Alliances", "CTOs"],
+      "cta": {
+        "label": "See the partner positioning",
+        "action": "value-narrative"
+      },
+      "tags": ["Sell", "Differentiate"]
+    }
+  ],
+
+  "whyThisMatters": {
+    "architecture": {
+      "title": "Architecture impact",
+      "points": [
+        "New integration and orchestration patterns matter more than isolated AI features",
+        "Security, observability and governance need to be designed from the start",
+        "Hybrid integration remains essential for enterprise adoption"
+      ]
+    },
+    "offer": {
+      "title": "Offer / practice impact",
+      "points": [
+        "Partners can package new advisory and implementation offers around agentic workflows",
+        "Governance and AI readiness become attach opportunities",
+        "Combined Automation + Data & AI narratives are stronger than isolated propositions"
+      ]
+    },
+    "business": {
+      "title": "Business impact",
+      "points": [
+        "Better partner differentiation in crowded AI market",
+        "More credible C-level conversations with strategic framing",
+        "Clearer path from awareness to activation"
+      ]
+    }
+  },
+
+  "byRole": {
+    "architects": {
+      "watch": "Integration patterns, governance, observability, agent interoperability",
+      "say": "IBM supports open, hybrid orchestration across enterprise systems and partner capabilities",
+      "do": "Review architecture brief and demo path"
+    },
+    "practiceLeaders": {
+      "watch": "Repeatable offers, new service lines, attach opportunities",
+      "say": "Agentic + integration + governance is an offer stack, not a single product conversation",
+      "do": "Align one packaged offering to current IBM priority themes"
+    },
+    "ctos": {
+      "watch": "Enterprise trust, scale, controls, operational fit",
+      "say": "IBM combines AI, data, governance and automation in a hybrid model suitable for enterprise operating environments",
+      "do": "Use the POV brief in client strategy conversations"
+    },
+    "alliances": {
+      "watch": "Co-sell plays, event leverage, route-to-market alignment",
+      "say": "IBM priorities create conversation entry points with business and technical stakeholders",
+      "do": "Activate one campaign or event follow-up sequence"
+    }
+  },
+
+  "strategicThemes": {
+    "automation": [
+      {
+        "title": "Agentic orchestration",
+        "ibmPov": "watsonx Orchestrate evolves to support partner agents, domain agents and Agent Connect for ecosystem collaboration.",
+        "partnerValue": "Partners can build differentiated agent capabilities and integrate them into enterprise orchestration workflows.",
+        "cta": "View talking points"
+      },
+      {
+        "title": "Integration and workflow modernization",
+        "ibmPov": "Hybrid integration and API management remain foundational for connecting AI, automation and enterprise systems.",
+        "partnerValue": "Integration expertise becomes more valuable as enterprises connect AI capabilities to operational reality.",
+        "cta": "Open technical brief"
+      },
+      {
+        "title": "Automation operations and value realization",
+        "ibmPov": "Linking automation to optimization, FinOps and business outcomes through portfolio integration with Apptio.",
+        "partnerValue": "Partners can position automation as strategic business transformation, not just task efficiency.",
+        "cta": "See enablement path"
+      }
+    ],
+    "dataAI": [
+      {
+        "title": "Trusted enterprise AI",
+        "ibmPov": "watsonx platform provides foundation models, governance and enterprise-grade AI capabilities designed for production scale.",
+        "partnerValue": "Partners can differentiate by emphasizing trust, governance and enterprise readiness over feature velocity.",
+        "cta": "View talking points"
+      },
+      {
+        "title": "Data foundations for AI readiness",
+        "ibmPov": "watsonx.data and data fabric capabilities enable organizations to prepare, integrate and govern data for AI workloads.",
+        "partnerValue": "Data readiness and integration services become essential precursors to successful AI implementations.",
+        "cta": "Open technical brief"
+      },
+      {
+        "title": "AI governance and model oversight",
+        "ibmPov": "watsonx.governance provides model monitoring, risk management and compliance controls for production AI systems.",
+        "partnerValue": "Governance becomes a distinct service offering and competitive differentiator for enterprise AI projects.",
+        "cta": "See enablement path"
+      }
+    ]
+  },
+
+  "events": [
+    {
+      "name": "Technical enablement: Agent Connect & Partner Ecosystem",
+      "whyAttend": "Understand how to build and integrate partner agents into watsonx Orchestrate workflows",
+      "bestAudience": "Architects, Technical leads",
+      "date": "April 15, 2026",
+      "cta": "Register now"
+    },
+    {
+      "name": "Executive partner update: Q2 portfolio priorities",
+      "whyAttend": "Strategic overview of IBM Automation and Data & AI direction for partner planning",
+      "bestAudience": "Practice leaders, Alliance leaders, CTOs",
+      "date": "April 22, 2026",
+      "cta": "Register now"
+    },
+    {
+      "name": "Industry session: Financial services AI governance",
+      "whyAttend": "Sector-specific governance requirements and IBM approach for regulated industries",
+      "bestAudience": "Architects, CTOs, Industry specialists",
+      "date": "April 29, 2026",
+      "cta": "Register now"
+    }
+  ],
+
+  "marketSignals": [
+    {
+      "type": "adoption",
+      "title": "Enterprise AI governance adoption accelerates",
+      "signal": "70% of Fortune 500 companies now require AI governance frameworks before production deployment",
+      "implication": "Governance is no longer optional—it's a prerequisite for enterprise AI adoption"
+    },
+    {
+      "type": "ecosystem",
+      "title": "Partner agent ecosystem gains momentum",
+      "signal": "15+ strategic partners building domain agents for watsonx Orchestrate integration",
+      "implication": "Agent interoperability and ecosystem collaboration become competitive advantages"
+    },
+    {
+      "type": "convergence",
+      "title": "Automation + AI convergence drives value",
+      "signal": "Clients achieving 3x ROI when combining automation, AI and optimization capabilities",
+      "implication": "Cross-portfolio positioning creates stronger business cases than point solutions"
+    }
+  ],
+
+  "activationPaths": [
+    {
+      "title": "Sales plays",
+      "description": "Co-sell plays, conversation starters, and client engagement frameworks",
+      "audience": "Alliance leaders, Sales teams",
+      "cta": "Access plays"
+    },
+    {
+      "title": "Technical enablement",
+      "description": "Architecture briefs, demo environments, and technical positioning guides",
+      "audience": "Architects, Technical leads",
+      "cta": "View resources"
+    },
+    {
+      "title": "Training",
+      "description": "Role-based learning paths, certifications, and skill development",
+      "audience": "All roles",
+      "cta": "Start learning"
+    },
+    {
+      "title": "Partner programs",
+      "description": "Co-marketing opportunities, funding programs, and ecosystem initiatives",
+      "audience": "Practice leaders, Alliance leaders",
+      "cta": "Explore programs"
+    }
+  ],
+
+  "editorNote": {
+    "title": "Why these priorities?",
+    "content": "This month's selection reflects three converging market dynamics: the shift from AI experimentation to production deployment, the emergence of agentic workflows as an enterprise pattern, and the increasing importance of value realization in automation investments. These themes create natural conversation entry points for partners across both Automation and Data & AI portfolios."
+  }
+}

@@ -1,0 +1,98 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.why-matters-section {
+  padding: $spacing-10 0;
+  background: $layer-01;
+
+  @include breakpoint-down(md) {
+    padding: $spacing-08 0;
+  }
+}
+
+.why-matters-container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 $spacing-05;
+
+  @include breakpoint-down(md) {
+    padding: 0 $spacing-03;
+  }
+}
+
+.why-matters-header {
+  margin-bottom: $spacing-08;
+  max-width: 720px;
+
+  h2 {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin-bottom: $spacing-03;
+  }
+
+  .why-matters-subtitle {
+    @include type-style('body-02');
+    color: $text-secondary;
+    line-height: 1.5;
+  }
+}
+
+.why-matters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-06;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-05;
+  }
+}
+
+.matters-card {
+  background: $background;
+  border: 1px solid $border-subtle-01;
+  border-radius: 4px;
+  padding: $spacing-06;
+
+  .matters-icon {
+    font-size: 2rem;
+    margin-bottom: $spacing-04;
+  }
+
+  .matters-title {
+    @include type-style('heading-03');
+    color: $text-primary;
+    margin: 0 0 $spacing-05 0;
+  }
+
+  .matters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-04;
+  }
+
+  .matters-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-03;
+
+    .matters-check {
+      flex-shrink: 0;
+      margin-top: 2px;
+      fill: $support-success;
+    }
+
+    span {
+      @include type-style('body-01');
+      color: $text-secondary;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Made with Bob

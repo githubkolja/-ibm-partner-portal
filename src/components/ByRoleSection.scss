@@ -1,0 +1,104 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.by-role-section {
+  padding: $spacing-10 0;
+  background: $background;
+
+  @include breakpoint-down(md) {
+    padding: $spacing-08 0;
+  }
+}
+
+.by-role-container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 $spacing-05;
+
+  @include breakpoint-down(md) {
+    padding: 0 $spacing-03;
+  }
+}
+
+.by-role-header {
+  margin-bottom: $spacing-08;
+  max-width: 720px;
+
+  h2 {
+    @include type-style('heading-04');
+    color: $text-primary;
+    margin-bottom: $spacing-03;
+  }
+
+  .by-role-subtitle {
+    @include type-style('body-02');
+    color: $text-secondary;
+    line-height: 1.5;
+  }
+}
+
+.by-role-tabs {
+  .cds--tabs {
+    background: transparent;
+  }
+
+  .cds--tab {
+    .tab-icon {
+      margin-right: $spacing-02;
+      font-size: 1.25rem;
+    }
+  }
+
+  .cds--tab-content {
+    padding: $spacing-07 0;
+  }
+}
+
+.role-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-06;
+
+  @include breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-05;
+  }
+}
+
+.role-section {
+  background: $layer-01;
+  border: 1px solid $border-subtle-01;
+  border-radius: 4px;
+  padding: $spacing-06;
+
+  .role-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-04;
+    padding-bottom: $spacing-04;
+    border-bottom: 1px solid $border-subtle-01;
+
+    h3 {
+      @include type-style('heading-03');
+      color: $text-primary;
+      margin: 0;
+    }
+
+    .role-section-icon {
+      font-size: 1.5rem;
+      opacity: 0.7;
+    }
+  }
+
+  p {
+    @include type-style('body-01');
+    color: $text-secondary;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+// Made with Bob
