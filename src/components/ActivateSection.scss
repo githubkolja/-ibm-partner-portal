@@ -5,7 +5,7 @@
 
 .activate-section {
   padding: $spacing-10 0;
-  background: $layer-01;
+  background: #ffffff;
 
   @include breakpoint-down(md) {
     padding: $spacing-08 0;
@@ -28,14 +28,27 @@
 
   h2 {
     @include type-style('heading-04');
-    color: $text-primary;
+    color: #161616;
     margin-bottom: $spacing-03;
+    font-weight: 600;
   }
 
   .activate-subtitle {
     @include type-style('body-02');
-    color: $text-secondary;
+    color: #525252;
     line-height: 1.5;
+    margin-bottom: $spacing-04;
+  }
+
+  .activate-note {
+    @include type-style('body-01');
+    color: #161616;
+    font-style: italic;
+    padding: $spacing-04;
+    background: #f4f4f4;
+    border-left: 3px solid #0f62fe;
+    border-radius: 4px;
+    margin-top: $spacing-04;
   }
 }
 
@@ -57,17 +70,21 @@
   display: flex;
   flex-direction: column;
   gap: $spacing-04;
-  padding: $spacing-06;
+  padding: $spacing-07;
   cursor: pointer;
-  transition: all 0.2s ease;
-  border: 1px solid $border-subtle-01;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   &:hover {
-    border-color: $border-interactive;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-color: #0f62fe;
+    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.2);
+    transform: translateY(-2px);
 
     .tile-cta {
-      color: $link-primary-hover;
+      color: #0043ce;
 
       .cta-icon {
         transform: translateX(4px);
@@ -82,13 +99,14 @@
 
   .tile-title {
     @include type-style('heading-03');
-    color: $text-primary;
+    color: #161616;
     margin: 0;
+    font-weight: 600;
   }
 
   .tile-description {
     @include type-style('body-01');
-    color: $text-secondary;
+    color: #161616;
     line-height: 1.5;
     margin: 0;
     flex: 1;
@@ -98,18 +116,19 @@
     display: flex;
     gap: $spacing-02;
     padding-top: $spacing-03;
-    border-top: 1px solid $border-subtle-01;
+    border-top: 1px solid #e0e0e0;
 
     .audience-label {
       @include type-style('label-01');
-      color: $text-secondary;
+      color: #525252;
       text-transform: uppercase;
       letter-spacing: 0.32px;
+      font-weight: 600;
     }
 
     .audience-value {
       @include type-style('label-01');
-      color: $text-primary;
+      color: #161616;
     }
   }
 
@@ -119,8 +138,8 @@
     justify-content: space-between;
     gap: $spacing-03;
     padding-top: $spacing-04;
-    border-top: 1px solid $border-subtle-01;
-    color: $link-primary;
+    border-top: 1px solid #e0e0e0;
+    color: #0f62fe;
     transition: all 0.2s ease;
 
     .cta-text {

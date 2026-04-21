@@ -1,9 +1,9 @@
 import React from 'react';
 import { Tag, Button } from '@carbon/react';
-import { ArrowRight } from '@carbon/icons-react';
+import { ArrowRight, ArrowDown, Launch } from '@carbon/icons-react';
 import './HeroSection.scss';
 
-const HeroSection = ({ data }) => {
+const HeroSection = ({ data, scrollToSection }) => {
   const { monthlyContext } = data;
 
   return (
@@ -21,6 +21,27 @@ const HeroSection = ({ data }) => {
               </Tag>
             ))}
           </div>
+
+          {monthlyContext.ctas && (
+            <div className="hero-ctas">
+              <Button
+                kind="primary"
+                size="lg"
+                renderIcon={ArrowDown}
+                onClick={() => scrollToSection('priorities')}
+              >
+                {monthlyContext.ctas.primary.label}
+              </Button>
+              <Button
+                kind="secondary"
+                size="lg"
+                renderIcon={Launch}
+                onClick={() => scrollToSection('activate')}
+              >
+                {monthlyContext.ctas.secondary.label}
+              </Button>
+            </div>
+          )}
         </div>
 
         <div className="hero-glance">

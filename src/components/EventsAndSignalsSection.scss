@@ -5,7 +5,7 @@
 
 .events-signals-section {
   padding: $spacing-10 0;
-  background: $background;
+  background: #ffffff;
 
   @include breakpoint-down(md) {
     padding: $spacing-08 0;
@@ -40,19 +40,20 @@
     margin-bottom: $spacing-03;
 
     .header-icon {
-      fill: $icon-primary;
+      fill: #161616;
     }
 
     h2 {
       @include type-style('heading-04');
-      color: $text-primary;
+      color: #161616;
       margin: 0;
+      font-weight: 600;
     }
   }
 
   .section-subtitle {
     @include type-style('body-02');
-    color: $text-secondary;
+    color: #525252;
     line-height: 1.5;
     margin: 0;
   }
@@ -66,13 +67,21 @@
 }
 
 .event-card {
-  background: $layer-01;
-  border: 1px solid $border-subtle-01;
-  border-radius: 4px;
-  padding: $spacing-05;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: $spacing-07;
   display: flex;
   flex-direction: column;
   gap: $spacing-04;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    border-color: #0f62fe;
+    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.2);
+    transform: translateY(-2px);
+  }
 
   .event-header {
     display: flex;
@@ -80,13 +89,14 @@
     align-items: flex-start;
     gap: $spacing-03;
     padding-bottom: $spacing-04;
-    border-bottom: 1px solid $border-subtle-01;
+    border-bottom: 1px solid #e0e0e0;
 
     .event-name {
       @include type-style('productive-heading-02');
-      color: $text-primary;
+      color: #161616;
       margin: 0;
       flex: 1;
+      font-weight: 600;
     }
   }
 
@@ -94,15 +104,16 @@
   .event-audience {
     .event-label {
       @include type-style('label-01');
-      color: $text-secondary;
+      color: #525252;
       text-transform: uppercase;
       letter-spacing: 0.32px;
       margin-bottom: $spacing-02;
+      font-weight: 600;
     }
 
     p {
       @include type-style('body-01');
-      color: $text-secondary;
+      color: #161616;
       line-height: 1.5;
       margin: 0;
     }
@@ -111,7 +122,7 @@
   .event-cta {
     margin-top: auto;
     padding-top: $spacing-03;
-    border-top: 1px solid $border-subtle-01;
+    border-top: 1px solid #e0e0e0;
   }
 }
 
@@ -123,13 +134,20 @@
 }
 
 .signal-card {
-  background: $layer-01;
-  border: 1px solid $border-subtle-01;
-  border-left: 4px solid $support-info;
-  border-radius: 4px;
-  padding: $spacing-05;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #0f62fe;
+  border-radius: 8px;
+  padding: $spacing-07;
   display: flex;
   gap: $spacing-04;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.2);
+    transform: translateY(-2px);
+  }
 
   .signal-icon {
     font-size: 2rem;
@@ -144,23 +162,25 @@
 
     .signal-title {
       @include type-style('productive-heading-02');
-      color: $text-primary;
+      color: #161616;
       margin: 0;
+      font-weight: 600;
     }
 
     .signal-data,
     .signal-implication {
       .signal-label {
         @include type-style('label-01');
-        color: $text-secondary;
+        color: #525252;
         text-transform: uppercase;
         letter-spacing: 0.32px;
         margin-bottom: $spacing-02;
+        font-weight: 600;
       }
 
       .signal-text {
         @include type-style('body-01');
-        color: $text-secondary;
+        color: #161616;
         line-height: 1.5;
         margin: 0;
       }
@@ -168,7 +188,7 @@
 
     .signal-implication {
       padding-top: $spacing-03;
-      border-top: 1px solid $border-subtle-01;
+      border-top: 1px solid #e0e0e0;
     }
   }
 }

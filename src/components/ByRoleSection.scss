@@ -5,7 +5,7 @@
 
 .by-role-section {
   padding: $spacing-10 0;
-  background: $background;
+  background: #ffffff;
 
   @include breakpoint-down(md) {
     padding: $spacing-08 0;
@@ -28,13 +28,14 @@
 
   h2 {
     @include type-style('heading-04');
-    color: $text-primary;
+    color: #161616;
     margin-bottom: $spacing-03;
+    font-weight: 600;
   }
 
   .by-role-subtitle {
     @include type-style('body-02');
-    color: $text-secondary;
+    color: #525252;
     line-height: 1.5;
   }
 }
@@ -68,10 +69,18 @@
 }
 
 .role-section {
-  background: $layer-01;
-  border: 1px solid $border-subtle-01;
-  border-radius: 4px;
-  padding: $spacing-06;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: $spacing-07;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    border-color: #0f62fe;
+    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.2);
+    transform: translateY(-2px);
+  }
 
   .role-section-header {
     display: flex;
@@ -79,12 +88,13 @@
     align-items: center;
     margin-bottom: $spacing-04;
     padding-bottom: $spacing-04;
-    border-bottom: 1px solid $border-subtle-01;
+    border-bottom: 1px solid #e0e0e0;
 
     h3 {
       @include type-style('heading-03');
-      color: $text-primary;
+      color: #161616;
       margin: 0;
+      font-weight: 600;
     }
 
     .role-section-icon {
@@ -95,7 +105,7 @@
 
   p {
     @include type-style('body-01');
-    color: $text-secondary;
+    color: #161616;
     line-height: 1.5;
     margin: 0;
   }

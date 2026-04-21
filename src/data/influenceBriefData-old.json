@@ -93,7 +93,7 @@
         },
         {
           "title": "Business Automation Insights",
-          "url": "https://www.ibm.com/solutions/automation",
+          "url": "https://www.ibm.com/automation/business-automation",
           "type": "blog"
         }
       ]
@@ -164,7 +164,7 @@
         "ibmPov": "Hybrid integration and API management remain foundational for connecting AI, automation and enterprise systems.",
         "partnerValue": "Integration expertise becomes more valuable as enterprises connect AI capabilities to operational reality.",
         "cta": "Open technical brief",
-        "url": "https://www.ibm.com/products/webmethods-hybrid-integration"
+        "url": "https://www.ibm.com/cloud/integration-services"
       },
       {
         "title": "Automation operations and value realization",
@@ -214,7 +214,7 @@
       "bestAudience": "Practice leaders, Alliance leaders, CTOs",
       "date": "April 22, 2026",
       "cta": "Register now",
-      "url": "https://www.ibm.com/partnerplus"
+      "url": "https://www.ibm.com/partnerworld/public"
     },
     {
       "name": "Industry session: Financial services AI governance",
@@ -253,14 +253,14 @@
       "description": "Co-sell plays, conversation starters, and client engagement frameworks",
       "audience": "Alliance leaders, Sales teams",
       "cta": "Access plays",
-      "url": "https://www.ibm.com/partnerplus"
+      "url": "https://www.ibm.com/partnerworld/public"
     },
     {
       "title": "Technical enablement",
       "description": "Architecture briefs, demo environments, and technical positioning guides",
       "audience": "Architects, Technical leads",
       "cta": "View resources",
-      "url": "https://www.ibm.com/partnerplus"
+      "url": "https://www.ibm.com/partnerworld/public"
     },
     {
       "title": "Training",
@@ -274,7 +274,7 @@
       "description": "Co-marketing opportunities, funding programs, and ecosystem initiatives",
       "audience": "Practice leaders, Alliance leaders",
       "cta": "Explore programs",
-      "url": "https://www.ibm.com/partnerplus"
+      "url": "https://www.ibm.com/partnerworld/public"
     }
   ],
 

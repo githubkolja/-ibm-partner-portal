@@ -55,6 +55,7 @@ const EventsAndSignalsSection = ({ events, marketSignals }) => {
                     kind="tertiary"
                     size="sm"
                     renderIcon={ArrowRight}
+                    onClick={() => event.url && window.open(event.url, '_blank')}
                   >
                     {event.cta}
                   </Button>

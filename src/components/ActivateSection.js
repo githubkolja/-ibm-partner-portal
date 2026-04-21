@@ -27,11 +27,19 @@ const ActivateSection = ({ activationPaths }) => {
           <p className="activate-subtitle">
             Four pathways to turn insights into action
           </p>
+          <p className="activate-note">
+            Use this brief to find the right next step quickly; detailed assets remain in the corresponding IBM partner platforms.
+          </p>
         </div>
 
         <div className="activate-grid">
           {activationPaths.map((path, index) => (
-            <Tile key={index} className="activate-tile">
+            <Tile
+              key={index}
+              className="activate-tile"
+              onClick={() => path.url && window.open(path.url, '_blank')}
+              style={{ cursor: path.url ? 'pointer' : 'default' }}
+            >
               <div className="tile-icon">{getIcon(path.title)}</div>
               <h3 className="tile-title">{path.title}</h3>
               <p className="tile-description">{path.description}</p>

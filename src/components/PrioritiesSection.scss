@@ -5,7 +5,7 @@
 
 .priorities-section {
   padding: $spacing-10 0;
-  background: $background;
+  background: #ffffff;
 
   @include breakpoint-down(md) {
     padding: $spacing-08 0;
@@ -28,13 +28,14 @@
 
   h2 {
     @include type-style('heading-04');
-    color: $text-primary;
+    color: #161616;
     margin-bottom: $spacing-03;
+    font-weight: 600;
   }
 
   .priorities-subtitle {
     @include type-style('body-02');
-    color: $text-secondary;
+    color: #525252;
     line-height: 1.5;
   }
 }
@@ -51,18 +52,20 @@
 }
 
 .priority-card {
-  background: $layer-01;
-  border: 1px solid $border-subtle-01;
-  border-radius: 4px;
-  padding: $spacing-06;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: $spacing-07;
   display: flex;
   flex-direction: column;
   gap: $spacing-05;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   &:hover {
-    border-color: $border-interactive;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-color: #0f62fe;
+    box-shadow: 0 4px 16px rgba(15, 98, 254, 0.2);
+    transform: translateY(-2px);
   }
 
   .priority-header {
@@ -81,23 +84,25 @@
 
   .priority-title {
     @include type-style('heading-03');
-    color: $text-primary;
+    color: #161616;
     margin: 0;
     line-height: 1.3;
+    font-weight: 600;
   }
 
   .priority-why {
     .why-label {
       @include type-style('label-01');
-      color: $text-secondary;
+      color: #525252;
       text-transform: uppercase;
       letter-spacing: 0.32px;
       margin-bottom: $spacing-02;
+      font-weight: 600;
     }
 
     .why-text {
       @include type-style('body-01');
-      color: $text-secondary;
+      color: #161616;
       line-height: 1.5;
       margin: 0;
     }
@@ -106,10 +111,11 @@
   .priority-audience {
     .audience-label {
       @include type-style('label-01');
-      color: $text-secondary;
+      color: #525252;
       text-transform: uppercase;
       letter-spacing: 0.32px;
       margin-bottom: $spacing-02;
+      font-weight: 600;
     }
 
     .audience-tags {
@@ -119,11 +125,11 @@
 
       .audience-tag {
         @include type-style('label-01');
-        color: $text-primary;
-        background: $layer-02;
+        color: #161616;
+        background: #f4f4f4;
         padding: $spacing-02 $spacing-03;
         border-radius: 2px;
-        border: 1px solid $border-subtle-01;
+        border: 1px solid #e0e0e0;
       }
     }
   }

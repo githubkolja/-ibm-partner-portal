@@ -1,9 +1,13 @@
 import React from 'react';
 import { Tag, Button } from '@carbon/react';
 import { ArrowRight } from '@carbon/icons-react';
+import ResourceModal from './ResourceModal';
+import useResourceModal from '../hooks/useResourceModal';
 import './PrioritiesSection.scss';
 
 const PrioritiesSection = ({ priorities }) => {
+  const { isOpen, selectedResource, closeModal, openResourceWithPreview } = useResourceModal();
+
   const getThemeColor = (theme) => {
     switch (theme) {
       case 'Automation':
@@ -14,6 +18,25 @@ const PrioritiesSection = ({ priorities }) => {
         return 'blue';
       default:
         return 'gray';
+    }
+  };
+
+  const handleCtaClick = (priority) => {
+    if (priority.resources && priority.resources.length > 0) {
+      const resourceData = {
+        title: priority.title,
+        url: priority.cta.url,
+        type: priority.theme,
+        preview: priority.whyMatters,
+        metadata: {
+          author: 'IBM',
+          date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+        },
+        relatedResources: priority.resources
+      };
+      openResourceWithPreview(resourceData);
+    } else {
+      window.open(priority.cta.url, '_blank');
     }
   };
 
@@ -66,6 +89,7 @@ const PrioritiesSection = ({ priorities }) => {
                   kind="tertiary"
                   size="md"
                   renderIcon={ArrowRight}
+                  onClick={() => handleCtaClick(priority)}
                 >
                   {priority.cta.label}
                 </Button>
@@ -74,6 +98,12 @@ const PrioritiesSection = ({ priorities }) => {
           ))}
         </div>
       </div>
+
+      <ResourceModal
+        isOpen={isOpen}
+        onClose={closeModal}
+        resource={selectedResource}
+      />
     </section>
   );
 };

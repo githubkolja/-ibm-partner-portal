@@ -40,6 +40,7 @@ const StrategicThemesSection = ({ strategicThemes }) => {
                       kind="ghost"
                       size="sm"
                       renderIcon={ArrowRight}
+                      onClick={() => theme.url && window.open(theme.url, '_blank')}
                     >
                       {theme.cta}
                     </Button>

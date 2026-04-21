@@ -109,7 +109,7 @@ function App() {
         </Header>
 
         <Content className="main-content">
-          <HeroSection data={influenceBriefData} />
+          <HeroSection data={influenceBriefData} scrollToSection={scrollToSection} />
 
           <div id="priorities">
             <PrioritiesSection priorities={influenceBriefData.priorities} />

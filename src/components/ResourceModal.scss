@@ -1,0 +1,127 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.resource-modal-content {
+  padding: $spacing-05 0;
+
+  .resource-type {
+    margin-bottom: $spacing-05;
+
+    .type-badge {
+      @include type-style('label-01');
+      display: inline-block;
+      padding: $spacing-02 $spacing-03;
+      background: $layer-accent-01;
+      color: $text-primary;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.32px;
+    }
+  }
+
+  .resource-preview {
+    margin-bottom: $spacing-06;
+
+    h4 {
+      @include type-style('heading-03');
+      color: $text-primary;
+      margin-bottom: $spacing-03;
+    }
+
+    p {
+      @include type-style('body-02');
+      color: $text-secondary;
+      line-height: 1.6;
+    }
+  }
+
+  .resource-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-03;
+    padding: $spacing-05;
+    background: $layer-01;
+    border-radius: 4px;
+    margin-bottom: $spacing-05;
+
+    .metadata-item {
+      display: flex;
+      gap: $spacing-03;
+
+      .metadata-label {
+        @include type-style('label-01');
+        color: $text-secondary;
+        min-width: 100px;
+      }
+
+      .metadata-value {
+        @include type-style('body-01');
+        color: $text-primary;
+      }
+    }
+  }
+
+  .resource-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-03;
+    padding: $spacing-04;
+    background: $layer-02;
+    border-radius: 4px;
+    margin-bottom: $spacing-06;
+
+    .link-icon {
+      flex-shrink: 0;
+      fill: $icon-secondary;
+    }
+
+    .link-text {
+      @include type-style('code-01');
+      color: $text-secondary;
+      word-break: break-all;
+      font-size: 12px;
+    }
+  }
+
+  .related-resources {
+    h4 {
+      @include type-style('heading-03');
+      color: $text-primary;
+      margin-bottom: $spacing-04;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-03;
+
+      li {
+        a {
+          @include type-style('body-01');
+          color: $link-primary;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          padding: $spacing-03;
+          border-radius: 4px;
+          transition: background 0.2s ease;
+
+          &:hover {
+            background: $layer-hover-01;
+            text-decoration: underline;
+          }
+
+          &:visited {
+            color: $link-visited;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Made with Bob
